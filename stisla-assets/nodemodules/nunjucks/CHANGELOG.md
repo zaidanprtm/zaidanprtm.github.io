@@ -257,10 +257,10 @@ No code changes; fixed npm packaging issue.
   Thanks Alex Mayfield for report and test, Ouyang Yadong for fix.
   Merge of [#661](https://github.com/mozilla/nunjucks/pull/661).
 
-* Add support for `{% set %}` block assignments as in jinja2. Thanks Daniele
+* Add support for `{% raw %}{% set %}{% endraw %}` block assignments as in jinja2. Thanks Daniele
   Rapagnani. Merge of [#656](https://github.com/mozilla/nunjucks/pull/656)
 
-* Fix `{% set %}` scoping within macros.
+* Fix `{% raw %}{% set %}{% endraw %}` scoping within macros.
   Fixes [#577](https://github.com/mozilla/nunjucks/issues/577) and
   the macro portion of [#561](https://github.com/mozilla/nunjucks/issues/561).
   Thanks Ouyang Yadong. Merge of [#653](https://github.com/mozilla/nunjucks/pull/653).
