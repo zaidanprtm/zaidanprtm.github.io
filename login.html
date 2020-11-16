@@ -1,94 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <link type="text/css" rel="stylesheet" href="css/guild.css"/>
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login EXE Guild</title>
-</head>
+<body>
+  <div id="app">
+    <section class="section">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+            <div class="login-brand">
+              <img src="<?php echo base_url('assets/images/logo/logo3.png'); ?>" alt="logo" width="70%" class="">
+            </div>
 
-<body style="background-color: powderblue;">
-	<!-- navbar -->
-    	<div class="navbar-fixed">
-		    <nav class="blue lighten-4">
-		    	<div class="nav-wrapper">
-			        <a href="#!" class="brand-logo font-teko">EXE Guild</a>
-			        <a href="#" data-target="mobile-guild-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			        <ul class="right hide-on-med-and-down">
-			          <li><a href="" class="font-teko" style="font-size: 25px">RANK</a></li>
-			          <li><a href="" class="font-teko" style="font-size: 25px">FORUM</a></li>
-			          <li><a href="index.html" class="font-teko" style="font-size: 25px">BACK</a></li>
-			        </ul>
-		    	</div>
-		    </nav>
-	    </div>
-	<div class="row">
-		
-	</div>
-	<div class="row">
-		<div class="col s12 m4 l2">
-			
-		</div>
-		<div class="col s12 m8 l8">
-			<img src="img/Executives Logo.png" alt="Logo Executives" class="center" style="width:250px;height:250px;">
-		</div>
-		<div class="col s12 m4 l2">
-			
-		</div>
-	</div>
-	<div class="row">
-		<div class="col s12 m4 l4">
-			
-		</div>
-		<div class="col s12 m8 l4">
-			<div class="card white z-depth-2 card-feature" id="cardprofile">
-				<div class="card-content black-text">
-					<p style="font-size: 25px" class="center-align font-teko">LOGIN</p>
-					<div class="row center-align">
-				        <div class="input-field col s12">
-				          <input placeholder="username" id="username" type="text" class="validate" required>
-				          <label for="username">Username</label>
-				        </div>
-			      	</div>
-			      	<div class="row center-align">
-				        <div class="input-field col s12">
-				          <input placeholder="password" id="password" type="password" class="validate" required>
-				          <label for="password">Password</label>
-				        </div>
-			      	</div>
-			      	<br>
-			      	<a class="button-take center" href="">Login</a>			
-				</div>
-		    </div>
-		</div>
-		<div class="col s12 m4 l4">
-			
-		</div>
-	</div>
+            <div class="card card-primary">
+              <div class="card-header"><h4>Admin Login</h4></div>
 
-	<!-- sidenav -->
-	    <ul class="sidenav" id="mobile-guild-nav">
-	    	<li><a href="" class="font-teko" style="font-size: 25px">RANK</a></li>
-	        <li><a href="" class="font-teko" style="font-size: 25px">FORUM</a></li>
-	        <li><a href="index.html" class="font-teko" style="font-size: 25px">BACK</a></li>   
-	    </ul>
+              <div class="card-body">
+                <form method="POST" action="/submit-login" class="needs-validation" novalidate="">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input id="username" type="username" class="form-control" name="username" tabindex="1" required autofocus>
+                    <div class="invalid-feedback">
+                      Please fill in your username
+                    </div>
+                  </div>
 
-	<footer>
-		<div class="footer-copyright">
-	        <div class="white-text card-title">
-	            © 2020 Copyright Executives Guild. All Rights Reserved
-	        </div>
-	    </div>
-	 </footer>
+                  <div class="form-group">
+                    <div class="d-block">
+                    	<label for="password" class="control-label">Password</label>
+                      <div class="float-right">
+                        <a href="auth-forgot-password.html" class="text-small">
+                          Forgot Password?
+                        </a>
+                      </div>
+                    </div>
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <div class="invalid-feedback">
+                      please fill in your password
+                    </div>
+                  </div>
 
- 	<!--JavaScript at end of body for optimized loading-->
- 	<script type="text/javascript" src="js/materialize.min.js">
- 		const sideNav = document.querySelectorAll('.sidenav');
-      	M.Sidenav.init(sideNav)
- 	</script>
-</body>
+                  <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                      <label class="custom-control-label" for="remember-me">Remember Me</label>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                      Login
+                    </button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+            <div class="simple-footer">
+              Copyright &copy; Jasa Sosmed ID
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </html>
