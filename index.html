@@ -305,6 +305,18 @@
 </body>
 <script src="https://bot.adepthq.com/assets/modules/channel-web/inject.js"></script>
 <script>
-    window.botpressWebChat.init({ host: 'https://bot.adepthq.com', botId: 'chatbot-adepth' })
+    window.botpressWebChat.init({ host: 'https://bot.adepthq.com', botId: 'chatbot-adepth', enableTranscriptDownload: false, enableReset: false, showConversationsButton: false, enableConversationDeletion: true })
+	// setTimeout(() => {
+	// 	window.botpressWebChat.sendEvent({
+	// 		type: 'show'
+	// 	});
+	// 	window.botpressWebChat.sendEvent({
+	// 		type: 'proactive-trigger',
+	// 		channel: 'web',
+	// 		payload: {
+	// 			text: 'fake message'
+	// 		}
+	// 	})
+    // }, 3000);
 </script>
 </html>
