@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Hello world HRM</h1>
+    </body>
+    <script src="https://bot.adepthq.com/assets/modules/channel-web/inject.js"></script>
+    <script>
+        window.botpressWebChat.init({ host: 'https://bot.adepthq.com', botId: 'chatbot-adepth', enableTranscriptDownload: false, enableReset: true, showConversationsButton: false, enableConversationDeletion: true })
+        document.getElementById('hide-bp').addEventListener('click', function() {
+            window.botpressWebChat.sendEvent({ type: 'hide' })
+        })
+        // setTimeout(() => {
+        // 	window.botpressWebChat.sendEvent({
+        // 		type: 'show'
+        // 	});
+        // 	window.botpressWebChat.sendEvent({
+        // 		type: 'proactive-trigger',
+        // 		channel: 'web',
+        // 		payload: {
+        // 			text: 'fake message'
+        // 		}
+        // 	})
+        // }, 3000);
+    </script>
+</html>
